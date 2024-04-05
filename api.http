@@ -1,0 +1,32 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "Novo evento 2",
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+
+POST Http://localhost:3333/events/8c4083af-d654-4b21-8df6-9969ff79d748/attendees
+Content-Type: application/json
+
+{
+    "name": "Eduardo Lottermann",
+    "email": "Lottermanneduardo81@gmail.com"
+}
+
+###
+
+GET http://localhost:3333/events/8c4083af-d654-4b21-8df6-9969ff79d748
+
+###
+GET http://localhost:3333/attendees/3/badge
+
+###
+GET http://localhost:3333/attendees/4/check-in
+
+###
+
+GET http://localhost:3333/events/8c4083af-d654-4b21-8df6-9969ff79d748/attendees?query=eduardo
